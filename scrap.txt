@@ -1,0 +1,74 @@
+for (let i = 0; i<data.results.length; i++) {
+    let card = document.createElement("div");
+card.className = "card"
+
+let image = document.createElement("img");
+image.setAttribute("src", data.results[i].picture.large);
+image.setAttribute("class", "picture");
+
+let attributes = document.createElement("ul");
+attributes.className = "attributes";
+
+let userName = document.createElement("li")
+userName.className = "user-name";
+userName.innerText = `${data.results[i].name.first} ${data.results[i].name.last}`;
+
+let email = document.createElement("li");
+email.className = "email";
+email.innerText = "email:" + data.results[i].email;
+
+let address = document.createElement("li");
+address.className = "address";
+address.innerText = `address: ${data.results[i].location.street.number} ${data.results[i].location.street.name}`;
+
+let phone = document.createElement("li");
+phone.className = "phone-number";
+phone.innerText = `phone-number: ${data.results[i].phone}`;
+
+let password = document.createElement("li");
+password.className = "password";
+password.innerText = `password: ${data.results[i].login.password}`;
+
+card.appendChild(image);
+attributes.appendChild(userName);
+attributes.appendChild(email);
+attributes.appendChild(address);
+attributes.appendChild(phone);
+attributes.appendChild(password);
+card.appendChild(attributes);
+document.body.appendChild(card);
+}
+
+
+
+
+/////////////
+
+
+const url = 'https://data.cityofnewyork.us/resource/kvhd-5fmu.json'
+let data;
+
+fetch(url)
+  .then(function(response) {
+    console.log("This is the response: ", response);
+      return response.json();
+  })
+  .then(function(myJson) {
+    data = myJson;
+    console.log("This is the JSON", myJson);
+    let card = document.createElement("div");
+    console.log(myJson[0].program_name); 
+    console.log(myJson[0].program_description);
+    console.log(myJson[0].plain_language_eligibility);
+    console.log(myJson[0].age_group);
+    console.log(myJson[0].population_served);
+  })
+
+let attributes = document.createElement("ul");
+attributes.className = "attributes";
+
+let ProName = document.createElement("li")
+ProName.className = "Program";
+ProName.innerText = myJson[0].program_name
+
+document.body.appendChild(ProName)
