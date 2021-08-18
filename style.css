@@ -4,4 +4,50 @@
     color: whitesmoke;
     padding: 10px;
     margin: 10px;
+    
 }
+
+#bar_div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.items:hover {
+    background-color: gray;
+    opacity: 0.5;
+ }
+img {
+    width: 150px;
+}
+ a {
+    width: 20%;
+    text-align: center;
+    text-decoration: none;
+ }
+ .items {
+     color: black;
+ }
+ #Dog {
+     display: flex;
+ }
+
+ .class1 {
+     width: 50%;
+ }
+ #searchBar {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 35%;
+    padding: 15px;
+    border-radius: 10px;
+    justify-content: center;
+}
+input[type=text] {
+    width: 30%;
+    -webkit-transition: width 0.01s ease-in-out;
+    transition: width 0.15s ease-in-out;  
+} 
+input[type=text]:focus {
+    width: 40%;
+}
+
