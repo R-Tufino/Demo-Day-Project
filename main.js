@@ -42,7 +42,7 @@ fetch(url)
     const Eligible = data[i].plain_language_eligibility;
     const paragraph5 = document.createElement("p");
     paragraph5.classList.toggle("more");
-    paragraph5.innerHTML = "Eligibility: " + Eligible;
+    paragraph5.innerHTML = "Eligibility Requirements: " + Eligible;
   //Warning
     const Warning = data[i].heads_up;
     const paragraph6 = document.createElement("p");
@@ -63,21 +63,22 @@ fetch(url)
 //More or Less Button
     var More = document.createElement("button");
     More.id = "myBtn"
-    More.innerText = "More Info";
+    More.classList.toggle("Butt");
+    More.innerText = "Display Info ";
     More.addEventListener("click", Fun);
     function Fun() {
       var btnText = document.getElementById("myBtn");
       paragraph8.style.display = "none";
 
-      if (btnText.innerHTML === "Less Info") {
-        btnText.innerHTML = "More Info"; 
+      if (btnText.innerHTML === "Display Info") {
+        btnText.innerHTML = "Display Info "; 
         Box.removeChild(paragraph5);
         Box.removeChild(paragraph6);
         Box.removeChild(paragraph7);
         Box.removeChild(paragraph8);
       } 
       else {
-        btnText.innerHTML = "Less Info"; 
+        btnText.innerHTML = "Display Info"; 
         Box.appendChild(paragraph5);
         Box.appendChild(paragraph6);
         Box.appendChild(paragraph7);
