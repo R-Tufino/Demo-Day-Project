@@ -16,9 +16,9 @@ fetch(url)
     
   //Program Name
     const ProName = data[i].program_name;
-    const Acro = data[i].program_acronym;
+    /*const Acro = data[i].program_acronym; + " (" + Acro + ")" */
     const paragraph1 = document.createElement("h1");
-    paragraph1.innerText = ProName + " (" + Acro + ")";
+    paragraph1.innerText = ProName ;
 //Targets Div
     const Target = document.createElement("div");
     Target.id = "Dog"
