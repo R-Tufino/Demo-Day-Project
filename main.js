@@ -68,7 +68,7 @@ fetch(url)
     More.addEventListener("click", Fun);
     function Fun() {
       var btnText = document.getElementById("myBtn");
-      paragraph8.style.display = "none";
+      
 
       if (btnText.innerHTML === "Display Info") {
         btnText.innerHTML = "Display Info "; 
