@@ -36,7 +36,7 @@ fetch(url)
   //Program Description
     const Deep = data[i].program_description;
     const paragraph4 = document.createElement("p");
-    paragraph4.innerHTML = Deep;
+    paragraph4.innerHTML = "Description: " + Deep;
 ////////////////////////////////////////////////////////////////////////////////////////////
   //Eligibility Requirments
     const Eligible = data[i].plain_language_eligibility;
